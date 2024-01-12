@@ -1,0 +1,45 @@
+// _sidebar.scss
+
+body aside#sidebar {
+    grid-area: sidebar; 
+    background-color: $sidebar-background-color; 
+  }
+
+  .sidebar-discount {
+    background-color: #000;
+    border-radius: 0px;
+    background: #a49edb;
+    box-shadow: inset 23px 23px 45px #8580b1,
+                inset -23px -23px 45px #c3bcff;
+    padding: 20px;
+    text-align: center;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      color: rgb(36, 36, 36);
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .black-friday-button {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 15px 30px;
+        color: $secondary-color;
+        background-color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: 0.2s;
+      
+        &:hover {
+          background-color: #5f52d6;
+          color: #fff;
+        }
+      }
+    }

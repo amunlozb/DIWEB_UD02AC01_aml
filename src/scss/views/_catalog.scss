@@ -1,0 +1,219 @@
+// _catalog.scss
+
+// @import "../layout/sidebar";
+
+
+@media only screen and (max-width: 600px) {
+  html body.catalog {
+    // oculto sidebar en pantallas pequeñas
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+
+    .product-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+
+      p {
+        font-size: $font-size-min-p;
+      }
+
+      .catalog-header {
+        width: 55%;
+        border-radius: 25px;
+        margin: 20px 80px;
+      }
+
+      .cards-section {
+        justify-content: start;
+        margin: 0 60px;
+      }
+    }
+    
+  }
+}
+
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  html body.catalog {
+
+    grid-template-columns: 1fr 4fr;
+    
+    #sidebar .filter-section {
+      .category-filter, .price-filter, .ratings-filter {
+        margin-left: -10px;
+      }
+    }
+    
+    // solo dos columnas de productos
+    .product-section 
+
+    .catalog-header {
+      border-radius: 15px;
+    }
+
+
+    .cards-section {
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .product-card {
+      width: 268px;    
+    }
+
+    header {
+      width: 130%;
+    }
+
+    #footer {
+      gap: 15px;
+    }
+  }
+}
+
+body.catalog {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+
+  background-color: $background-color;
+
+  // añado € al final de cada precio
+  .product-card h4.price::after {
+    content: "€";
+  }
+
+    .filter-section {
+      display: flex;
+      flex-direction: column;
+      margin: 1.5rem;
+      gap: 1rem;
+
+      input[type=radio] {
+        -webkit-appearance: none;
+        appearance: none;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        outline: none;
+        box-shadow: 0 0 0 2px gray;
+        transition: 0.5s all linear;
+        margin-right: 10px;
+        position: relative;
+      
+        &:before {
+          content: "";
+          display: block;
+          width: 60%;
+          height: 60%;
+          margin: 20% auto;
+          border-radius: 50%;    
+        }
+      
+        &:checked {
+          box-shadow: 0 0 0 2px #5b5779;
+      
+          &:before {
+            background: #5b5779;
+          }
+        }
+      }
+
+      input[type=range] {
+        margin: 10px;
+        -webkit-appearance: none; 
+        appearance: none;
+        width: 90%;
+        height: 15px;
+        border-radius: 5px;  
+        background: #d3d3d3; 
+        outline: none; 
+        opacity: 0.7; 
+        -webkit-transition: .2s; 
+        transition: opacity .2s;
+      
+        // parte de mover
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 25px; 
+          height: 25px; 
+          background: #5b5779; 
+          cursor: pointer; 
+          border-radius: 50%;
+        }
+      
+        &::-moz-range-thumb {
+          width: 25px; 
+          height: 25px; 
+          background: #5b5779; 
+          cursor: pointer; 
+          border-radius: 50%;
+        }
+      }
+
+      .category-filter {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .price-filter {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-weight: bold;
+          color: $primary-color;
+          margin-top: 0.2rem;
+        }
+      }
+
+      .ratings-filter {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    .product-section 
+    
+    .catalog-header {
+      border-radius: 0px;
+      background: #a49edb;
+      box-shadow: inset 23px 23px 45px #8580b1,
+                  inset -23px -23px 45px #c3bcff;
+      margin: 20px 60px;
+      border-radius: 50px;
+      padding: 5px;
+
+      h1 {
+        margin-top: 15px;
+      }
+    }
+    
+    .cards-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 60px;
+      padding: 20px;
+      gap: 20px;
+      background-color: $background-color;
+    }
+    .product-section h1,
+    .product-section p {
+      text-align: center;
+    }
+    
+}

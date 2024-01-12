@@ -1,0 +1,203 @@
+// _header.scss
+@media only screen and (max-width: 768px) {
+  body.catalog header {
+    width: 95%;
+  }
+
+  body.home header {
+    width: 95%;
+  }
+
+  body.register header {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body.home header, body.catalog header, body.register header {
+    width: 115%;
+  }
+}
+
+header {
+    width: 100%;
+    grid-area: header;
+    background-color: white;
+
+    .header-logo {
+      width: 5%;
+      height: auto;
+      margin-right: 50px;
+  
+      img {
+          // Set max-width to 100% to make the image responsive
+          max-width: 100%;
+          height: auto;
+          padding: 8%;
+      }
+    }
+
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+
+        .header-list {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+  }
+.header-list-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+.header-list-nav ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; 
+  }
+
+  .header-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-list-nav ul {
+    display: flex;
+  }
+  .header-list-nav ul li {
+    list-style-type: none;
+    padding: 0 20px;
+    position: relative;
+  }
+  .header-list-nav ul a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+  }
+  .header-list-nav ul a:hover,
+  .header-list-nav ul a.active {
+    color: #088178;
+    content: "";
+  }
+  .header-list-icon a {
+    color: #1a1a1a;
+    padding-left: 20px;
+    transition: 0.3s ease;
+  }
+  .header-list-icon a:hover,
+  .header-list-nav ul a.active {
+    color: #088178;
+  }
+  .header-list-nav ul li a:hover::after,
+  .header-list-nav ul li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: cover;
+}
+
+#close-button {
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 250px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+.video-text {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#overlayText {
+  animation: slideIn 1s ease-out 3s forwards;
+  color: white;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.bell {
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #2e2b0d;
+  -webkit-transform-origin: 50% 4px;
+  -moz-transform-origin: 50% 4px;
+  transform-origin: 50% 4px;
+
+  &:hover {
+    -webkit-animation: ring 3s ease-in-out infinite;
+    animation: ring 3s ease-in-out infinite;
+    -moz-animation: ring 3s ease-in-out infinite;
+  }
+}
+
+@keyframes ring {
+  0% { transform: rotate(0); }
+  5% { transform: rotate(10deg); }
+  10% { transform: rotate(-8deg); }
+  15% { transform: rotate(6deg); }
+  20% { transform: rotate(-4deg); }
+  25% { transform: rotate(2deg); }
+  30% { transform: rotate(-1deg); }
+  35% { transform: rotate(1deg); }
+  100% { transform: rotate(0); }
+}
+
+
+  

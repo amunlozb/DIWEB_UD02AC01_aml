@@ -1,0 +1,173 @@
+<!-- layout_principal.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAW2 - AML</title>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/0e53af926d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="home">
+    <!--header-->
+    <header>
+      <div id="header">
+        <div class="header-logo">
+          <a href="layout_principal.html"><img class="logo" src="img/coffee-logo.svg" alt="" /></a>
+        </div>
+        <div class="header-list">
+          <nav class="header-list-nav">
+            <ul>
+              <li><i class="fas fa-home"></i><a class="active" href="home.html">Inicio</a></li>
+              <li><i class="fas fa-book"></i><a href="catalog.html">Catálogo</a></li>
+              <li><i class="fas fa-sign-in-alt"></i><a href="login.html">Registro</a></li>
+              <li><i class="fa-solid fa-circle-info"></i></i><a href="#">Sobre Nosotros</a></li>
+              <li><i class="fas fa-envelope"></i><a href="#">Contacto</a></li>
+              <li><i class="bell fa fa-bell"></i></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- video -->
+    <button id="close-button" class="normal" onclick="closeVideo()">Cerrar</button>
+    
+    <video id="background-video" autoplay muted fullscreen>
+      <source src="img/home-video.mp4" type="video/mp4">
+    </video>
+    
+    <div class="video-text" id="video-text">
+      <h1 id="overlayText" class="hidden">Tienda de Café - DAW2</h1>
+      <p id="overlayText" class="hidden">Ángel Muñoz Lozano</p>
+    </div>
+
+    <!--main -->
+
+    <main>
+      <section id="hero">
+        <h4>¡No te la pierdas!</h4>
+        <h2>Nuestra nueva colección</h2>
+        <h1>Aqua Blue</h1>
+        <p>Ahorra hasta un 70% al comprar 4 unidades de la misma colección</p>
+        <button>Compra ahora</button>
+      </section>
+      
+      <section id="off-banner" class="section-m1">
+        <h4>Oferta de Liquidación</h4>
+        <h2>Hasta un 70% de descuento - Todos los cafés</h2>
+        <button class="normal">Explora más</button>
+      </section>
+      
+      <section id="features" class="section-p1">
+        <div class="f-box">
+          <img src="img/features/feature-mail.png" alt="free shipping" />
+          <h6>Envio gratis</h6>
+        </div>
+        <div class="f-box">
+          <img src="img/features/feature-graph.png" />
+          <h6>Pedido online</h6>
+        </div>
+        <div class="f-box">
+          <img src="img/features/feature-chart.png"/>
+          <h6>Ofertas</h6>
+        </div>
+        <div class="f-box">
+          <img src="img/features/feature-person.png" />
+          <h6>Promociones</h6>
+        </div>
+        <div class="f-box">
+          <img src="img/features/feature-clock.png" />
+          <h6>Tratos</h6>
+        </div>
+        <div class="f-box">
+          <img src="img/features/feature-laptop.png" />
+          <h6>Soporte 24/7</h6>
+        </div>
+      </section>
+    </main>
+
+    <!--footer -->
+
+    <footer>
+      <div id="footer">
+        <div class="contact">
+          <h3>Contacto</h3>
+          <address>
+            <p><b>Dirección:</b> Calle Alixar, Numero 38. Sevilla</p>
+            <p><b>Teléfono:</b> +34 666 777 888</p>
+            <p><b>Horas</b> 09:00 - 17:00. Lunes - Viernes</p>
+          </address>
+          <h3>Siguenos</h3>
+          <br> 
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy;This work is licensed under the <br><a href="https://huggingface.co/spaces/CompVis/stable-diffusion-license"><b>CreativeML Open RAIL-M License</b></a>.</p>
+            <div class="cc-icons">
+              <i class="fa-brands fa-creative-commons-by"></i>
+              <i class="fa-brands fa-creative-commons-nc-eu"></i>
+              <i class="fa-brands fa-creative-commons-nd"></i>
+              <i class="fa-brands fa-creative-commons-sa"></i>
+            </div>
+          </div>
+        </div>
+        <div class="about">
+          <h3>Información</h3>
+          <br> 
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Información de entregas</a>
+          <a href="#">Acuerdo de Privacidad</a>
+          <a href="#">Terminos y Condiciones</a>
+          <a href="#">Contacta con nosotros</a>
+        </div>
+        <div class="myaccount ">
+          <h3>Cuenta</h3>
+          <br> 
+          <a href="#">Registrarse</a>
+          <a href="#">Ver carrito</a>
+          <a href="#">Lista de deseados</a>
+          <a href="#">Rastrea mi pedido</a>
+          <a href="#">Ayuda</a>
+        </div>
+
+        <section id="newsletter">
+        <div class="newsletter-text">
+          <h3>Registrate a nuestra Newsletter</h3>
+          <h5>Infórmate a traves de emails sobre nuestras <span>ofertas especiales</span></h5>
+        </div>
+        <div class="form">
+          <input type="email" placeholder="Tu correo electrónico" id="email-address-input">
+          <button>Registrarse</button>
+        </div>
+      </section>
+       
+      </div>          
+    </footer>
+
+    <script>
+      function closeVideo() {
+        var parentElement = document.getElementById('background-video').parentNode;
+    
+        if (parentElement) {
+          parentElement.removeChild(document.getElementById('background-video'));
+          parentElement.removeChild(document.getElementById('close-button'));
+          parentElement.removeChild(document.getElementById('video-text'));
+        }
+      }
+    </script>
+    
+    
+  </body>
+</html>
